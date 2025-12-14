@@ -21,11 +21,11 @@ if (isset($_GET['id'])) {
 
 <head>
     <meta charset="UTF-8">
-    <title><?= $isEdit ? 'Edit Director' : 'Input Director'; ?></title>
+    <title><?= $isEdit ? 'Edit Sutradara' : 'Input Sutradara'; ?></title>
 </head>
 
 <body>
-    <!-- 'form_director.php?id=" . $row['id'] . "' -->
+    <!-- 'form_directors.php?id=" . $row['id'] . "' -->
     <form
         action="<?= $isEdit ? 'update_directors.php?id=' . $data['id'] : 'insert_directors.php'; ?>"
         method="post">
@@ -34,7 +34,7 @@ if (isset($_GET['id'])) {
         <?php endif; ?>
 
         <center>
-            <h3><?= $isEdit ? 'FORM EDIT DIRECTOR' : 'FORM INPUT DIRECTOR'; ?></h3>
+            <h3><?= $isEdit ? 'FORM EDIT SUTRADARA' : 'FORM INPUT SUTRADARA'; ?></h3>
         </center>
 
         <table border="1" align="center">
@@ -71,7 +71,7 @@ if (isset($_GET['id'])) {
                     <input
                         type="submit"
                         value="<?= $isEdit ? 'Update' : 'Simpan'; ?>">
-                    <a href="index.php">Batal</a>
+                    <a href="view_directors.php">Batal</a>
                 </td>
             </tr>
         </table>
