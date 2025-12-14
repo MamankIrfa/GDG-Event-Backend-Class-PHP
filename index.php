@@ -37,7 +37,7 @@ $query = mysqli_query($con, "SELECT * FROM directors");
                     <a href="form_director.php?id=<?= $row['id']; ?>">Edit</a> |
                     <a
                         href="delete_directors.php?id=<?= $row['id']; ?>"
-                        onclick="return confirm('Are you sure?')">
+                        onclick="return confirm('Kamu yakin ingin menghapus data ini?')">
                         Delete
                     </a>
                 </td>
