@@ -33,10 +33,9 @@ $query = mysqli_query($con, $cinema);
 
     <center>
         <h3>Lihat Data Film</h3>
-        <br />
-        <a href="view_directors.php">Lihat Data Sutradara</a>
-        <br />
-        <a href="view_actors.php">Lihat Data Aktor</a>
+        <a href="view_directors.php" style="padding-right: 10px;">Lihat Data Sutradara</a>
+        <a href="view_actors.php" style="padding-right: 10px;">Lihat Data Aktor</a>
+        <a href="view_genres.php">Lihat Data Genre Film</a>
     </center>
 
     <br>

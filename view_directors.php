@@ -1,6 +1,17 @@
 <?php
 include "connection.php";
-$query = mysqli_query($con, "SELECT * FROM directors");
+$keyword = isset($_GET['keyword']) ? $_GET['keyword'] : '';
+
+if ($keyword != '') {
+    $query = mysqli_query(
+        $con,
+        "SELECT * FROM directors 
+         WHERE name LIKE '%$keyword%'"
+    );
+} else {
+    $query = mysqli_query($con, "SELECT * FROM directors");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +26,12 @@ $query = mysqli_query($con, "SELECT * FROM directors");
 
     <center>
         <h3>Lihat Data Sutradara</h3>
-        <a href="index.php">Kembali</a>
+        <form method="GET">
+            <input type="text" name="keyword" placeholder="Cari Nama Sutradara"
+                value="<?= isset($_GET['keyword']) ? $_GET['keyword'] : ''; ?>">
+            <button type="submit">Cari</button>
+        </form>
+        <a href=" index.php" style="padding-right: 10px;">Kembali</a>
         <a href="form_directors.php">Tambah</a>
     </center>
 
